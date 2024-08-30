@@ -12,12 +12,6 @@ class LinkedList {
     this.size = 0;
   }
 
-  /* 
-            1. head a insert
-            2. tail e insert
-            3. random position
-    */
-
   insert_at_head(node) {
     // if head==Null
     if (this.head === null) {
@@ -87,7 +81,6 @@ ll.insert_at_head(head);
 ll.insert_at_tail(a);
 ll.insert_at_tail(b);
 ll.insert_at_tail(c);
-ll.insert_at_random_position(d,2)
-
+ll.insert_at_random_position(d, 2);
 
 ll.printListData();
