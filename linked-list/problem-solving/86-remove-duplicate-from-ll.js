@@ -1,0 +1,13 @@
+var deleteDuplicates = function (head) {
+  if (!head) return null; 
+
+  let current = head; 
+  while (current && current.next) {
+    if (current.val === current.next.val) {
+      current.next = current.next.next; 
+    } else {
+      current = current.next; // Move to the next unique element
+    }
+  }
+  return head;
+};
