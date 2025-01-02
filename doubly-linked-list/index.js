@@ -95,7 +95,7 @@ class DoublyLinkedList {
 const dll = new DoublyLinkedList();
 dll.addFront(10);
 dll.addEnd(20);
-dll.insertAt(15, 1); // Insert 15 at index 1
+dll.insertAt(15, 1); 
 
 dll.printListData(); // Prints 10, 15, 20
 dll.printReverse();  // Prints 20, 15, 10
