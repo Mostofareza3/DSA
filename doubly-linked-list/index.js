@@ -20,7 +20,7 @@ class DoublyLinkedList {
     if (this.head !== null) {
       this.head.prev = newNode;
     } else {
-      this.tail = newNode; // If the list was empty, head and tail are the same
+      this.tail = newNode; // jodi list empty thakto tahole head and tail same hoito
     }
     this.head = newNode;
     this.size++;
@@ -41,7 +41,7 @@ class DoublyLinkedList {
   // Insert at index
   insertAt(data, index) {
     if (index < 0 || index > this.size) {
-      return false; // Invalid index
+      return false;
     }
 
     if (index === 0) {
