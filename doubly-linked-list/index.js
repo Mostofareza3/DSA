@@ -97,5 +97,5 @@ dll.addFront(10);
 dll.addEnd(20);
 dll.insertAt(15, 1); 
 
-dll.printListData(); // Prints 10, 15, 20
-dll.printReverse();  // Prints 20, 15, 10
+dll.printListData(); 
+dll.printReverse(); 
