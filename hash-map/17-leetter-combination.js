@@ -40,8 +40,10 @@ digits[i] is a digit in the range ['2', '9'].
  *  dhro amr ache 34 asce tahole amr 3 & 4 er sokol value gula niye ekta cross check kore string of array banabo. 
  * 
  */
-var letterCombinations = function (digits) {
 
+
+var letterCombinations = function (digits) {
+    if(digits === "") return []
     const map = new Map()
     map.set("2", "abc")
     map.set("3", "def")
@@ -52,8 +54,46 @@ var letterCombinations = function (digits) {
     map.set("8", "tuv")
     map.set("9", "wxyz")
 
+    const foundMap = new Map()
+   
+
     for( char of digits){
-        console.log(char)
+        let found = map.get(char)
+        if(found){
+          foundMap.set(char, found)
+        }
+        
     }
 
+
+  let result = Array.from(foundMap).map(([acc, value]) => {
+   console.log(value)
+    return value.split("")
+});
+function generateCombinations(arr) {
+    let result = [''];
+
+    for (let str of arr) {
+      //ab
+        let temp = [];
+        for (let prefix of result) {
+          console.log(prefix)
+            for (let char of str) {
+                console.log(char)
+                //a,b
+                temp.push(prefix + char);
+            }
+        }
+        result = temp;
+    }
+
+    return result;
+}
+
+  const finalResult= generateCombinations(result)
+  return finalResult;
+  
 };
+
+console.log(letterCombinations("23"))
+
